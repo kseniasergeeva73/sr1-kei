@@ -7,19 +7,19 @@ def index(request):
 
 
 def product(request):
-    products = Product.objects.order_by(' product_name')
+    products = Product.objects.order_by('product_name')
 
-    return render(request, ' product.html', {'products': products})
+    return render(request, 'product.html', {'products': products})
 
 
 def detail(request):
-    details = Detail.objects.order_by(' product_name')
+    details = Detail.objects.order_by('product')
 
-    return render(request, ' detail.html', {'details': details})
+    return render(request, 'detail.html', {'details': details})
 
 
 def customer(request):
-    customers = Customer.objects.order_by('product_name')
+    customers = Customer.objects.order_by('goods')
 
     return render(request, 'customer.html', {'customers': customers})
 
